@@ -55,3 +55,46 @@ const bogor = {
 };
 
 marker(bogor);
+//   ----------------------------------------------------------------------------
+const Lang = ["JavaScript", "Python", "Ruby"];
+const [js ='', py, rb] = Lang;
+console.log(js, py, rb);
+// swapping values
+let firstName = "John";
+let lastName = "Doe";
+[firstName, lastName] = [lastName, firstName];
+console.log(firstName, lastName);
+// destructuring  from function 
+function getFruit() {
+    return [
+        'apple',
+        'banana',
+        'cherry'
+    ]
+}
+const [fruit1, fruit2, fruit3] = getFruit();
+console.log(fruit1, fruit2, fruit3);
+const [,b, c] = getFruit();
+console.log(b, c);
+// rest syntax array destructuring
+const LangComp = ['JavaScript', 'Python', 'Ruby', 'Golang', 'Rustlang'];
+const [j, ...rest] = LangComp;
+console.log(j, rest);
+// Nested Array 
+const Animal = [ 'dog', 'cat', ['bird', 'fish'] ];
+const [, , [bird, animal]] = Animal;
+console.log(animal, bird);
+
+// multidimesional array    
+const students = [
+    {nama : 'John', umur : 20},
+    {nama: 'Jane', umur : 21},
+]
+
+const [{nama: nama1, umur: umur1}] = students;
+console.log(nama1, umur1);
+
+for(const {nama, umur} of students){
+    console.log(nama, umur);
+}
+// ______________________________________________________________________________
